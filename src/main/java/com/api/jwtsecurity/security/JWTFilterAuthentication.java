@@ -22,7 +22,7 @@ import java.util.Date;
 public class JWTFilterAuthentication extends UsernamePasswordAuthenticationFilter {
 
     private static final int TOKEN_EXPIRED = 2_592_000; //expira em 10minutos, 1º ver se vai usar mesmo 1.1º se for usar mudar esse tempo ou não por
-    protected static final String TOKEN_PASSWORD = "13ac8031-0f82-461d-97e0-1c9a50fbc892"; //por em arquivo de config ou variavel de ambiente
+    protected static final String TOKEN_PASSWORD = "X"; //por em arquivo de config ou variavel de ambiente
     private final AuthenticationManager authenticationManager;
 
     public JWTFilterAuthentication(AuthenticationManager authenticationManager) {
