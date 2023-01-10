@@ -1,6 +1,14 @@
 # jwtSecurity
 
-Todas as rotas, exceto a de login, necessitam de na header declarar o token do usuário logado para navegar.
+
+
+Todas as rotas, exceto a de login, necessitam de na header declarar o token do usuário logado para navegar.<br>
+
+Frameworks: <br>
+Spring Boot<br>
+Spring Security<br>
+JWT<br>
+JPA<br>
 
 
 ## Rotas do tipo POST
