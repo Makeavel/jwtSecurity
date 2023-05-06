@@ -5,31 +5,47 @@ Frameworks: <br>
 Spring Boot<br>
 Spring Security<br>
 JWT<br>
-JPA<br>
+JPA<br><br>
+Banco de dados: <br>
+Postgres <br>
+
+**OBSERVAÇÃO:** Caso não tenha o Postgres instalado em sua máquina, adicione ao **POM.xml** do projeto a seguinite dependencia:<br>
+
+```
+<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>2.1.214</version>
+    <scope>test</scope>
+</dependency>
+```
 
 
 ## Rotas do tipo POST
 
-- Login:  localhost:8080/api/users/<br>
+- Salvar Usuario:  localhost:8080/api/users/<br>
 
- Json:<br>
-{<br>
-	"login":"user",<br>
-	"password":"password"<br>
+```
+ Json:
+ {
+	"login":"user",
+	"password":"password"
 }
-
+```
 <br><hr>
 
-- SalvarUsuario: localhost:8080/api/users/auth
-
-Json:<br>
-{<br>
-	"login":"mayte",<br>
-	"password":"1234",<br>
-	"email":"email_email@gmail.com",<br>
-	"cep":"70737022",<br>
-	"dataNascimento":"2022-05-21",<br>
-	"intoleranciaAlimentar": ["lactose", "gluten"],<br>
-	"restricaoAlimentar": ["vegano","outro"]<br>
+- Login : localhost:8080/api/users/auth
+```
+Json:
+{
+	"login":"mayte",
+	"password":"1234",
+	"email":"email_email@gmail.com",
+	"cep":"70737022",
+	"dataNascimento":"2022-05-21",
+	"intoleranciaAlimentar": ["lactose", "gluten"],
+	"restricaoAlimentar": ["vegano","outro"]
 }
+```
 <br><hr>
