@@ -9,7 +9,7 @@ JPA<br><br>
 Banco de dados: <br>
 Postgres <br>
 
-**OBSERVAÇÃO:** Caso não tenha o Postgres instalado em sua máquina, adicione ao **POM.xml** do projeto a seguinite dependencia:<br>
+**OBSERVAÇÃO:** Caso não tenha o Postgres instalado em sua máquina, no arquivo **application.properties** remova tudo que tiver a ver com o Postgres <br> e adicione ao **POM.xml** do projeto a seguinte dependencia:<br>
 
 ```
 <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
