@@ -9,7 +9,7 @@ JPA<br><br>
 Banco de dados: <br>
 Postgres <br>
 
-**OBSERVAÇÃO:** Caso não tenha o Postgres instalado em sua máquina, no arquivo **application.properties** remova tudo que tiver a ver com o Postgres e adicione ao **POM.xml** do projeto a seguinte dependencia:<br>
+**OBSERVAÇÃO:** Caso não tenha o Postgres instalado em sua máquina, no arquivo **application.properties** remova tudo que tiver a ver com o Postgres. Adicione ao **POM.xml** do projeto a seguinte dependencia:<br>
 
 **application.properties:**
 ```
