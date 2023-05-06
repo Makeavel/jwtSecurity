@@ -11,6 +11,19 @@ Postgres <br>
 
 **OBSERVAÇÃO:** Caso não tenha o Postgres instalado em sua máquina, no arquivo **application.properties** remova tudo que tiver a ver com o Postgres e adicione ao **POM.xml** do projeto a seguinte dependencia:<br>
 
+**application.properties:**
+```
+# Configurações do H2
+spring.h2.console.enabled=true
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+
+# Configurações do JPA
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+```
+**POM.xml:**
 ```
 <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 <dependency>
@@ -21,7 +34,7 @@ Postgres <br>
 ```
 
 
-## Rotas do tipo POST
+## Rotas
 
 - Salvar Usuario:  localhost:8080/api/users/<br>
 
