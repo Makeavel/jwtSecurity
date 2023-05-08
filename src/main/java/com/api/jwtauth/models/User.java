@@ -31,8 +31,7 @@ public class User {
     @NotEmpty(message = "{field.password.required}")
     private String password;
 
-    //@Transient
-    //private boolean admin;
+    private boolean admin;
 
     @Column(name = "email" , unique = true)
     @NotEmpty(message = "{field.email.required}")
