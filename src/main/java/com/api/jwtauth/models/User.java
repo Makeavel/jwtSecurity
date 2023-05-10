@@ -1,9 +1,6 @@
 package com.api.jwtauth.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -11,7 +8,8 @@ import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -31,8 +29,8 @@ public class User {
     @NotEmpty(message = "{field.password.required}")
     private String password;
 
-    //@Transient
-    //private boolean admin;
+
+    private boolean admin;
 
     @Column(name = "email" , unique = true)
     @NotEmpty(message = "{field.email.required}")
@@ -50,4 +48,5 @@ public class User {
 
     @ElementCollection
     private  List<String> restricaoAlimentar;
+
 }

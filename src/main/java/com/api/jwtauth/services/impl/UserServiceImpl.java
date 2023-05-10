@@ -27,13 +27,13 @@ public class UserServiceImpl implements UserDetailsService {
                 .findUserByLogin(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado!"));
 
-        //String[] roles = user.isAdmin() ? new String[] {"ADMIN", "USER"} : new String[]{"USER"};
+        String[] roles = user.isAdmin() ? new String[] {"ADMIN", "USER"} : new String[]{"USER"};
 
         return org.springframework.security.core.userdetails.User
                 .builder()
                 .username(user.getLogin())
                 .password(user.getPassword())
-                //.roles(roles)
+                .roles(roles)
                 .build();
         /*if(!username.equals("cicrano")){
             throw new UsernameNotFoundException("User not found");
