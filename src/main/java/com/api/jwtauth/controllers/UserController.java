@@ -39,12 +39,13 @@ public class UserController {
     }
 
     @PostMapping("/auth")
-    public TokenDTO login(@RequestBody CredentialsDTO credentials) {
+    public TokenDTO login(@RequestBody CredentialsDTO credentials) throws Exception {
         try {
             User attemptUser = User.builder().login(credentials.getLogin()).password(credentials.getPassword()).build();
             UserDetails authUser = userService.auth(attemptUser);
             String token = jwtService.generateToken(attemptUser);
-            return new TokenDTO(attemptUser.getLogin(), token);
+            User loggedUser = userService.getUserByLogin(attemptUser.getLogin());
+            return new TokenDTO(loggedUser, token);
         } catch (UsernameNotFoundException | InvalidPasswordException ex) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, ex.getMessage());
         }

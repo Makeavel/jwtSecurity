@@ -43,10 +43,23 @@ public class User {
     @Column(name = "dataNascimento")
     private LocalDate dataNascimento;
 
-    @ElementCollection
+    @Column(name = "vegetariano")
+    private Boolean vegetariano;
+
+    @Column(name = "gluten")
+    private Boolean gluten;
+
+    @Column(name = "lactose")
+    private Boolean lactose;
+
+    @Column(name = "porco")
+    private Boolean porco;
+
+    /*@ElementCollection
     private List<String> intoleranciaAlimentar;
 
     @ElementCollection
     private  List<String> restricaoAlimentar;
+    */
 
 }

@@ -1,4 +1,5 @@
 package com.api.jwtauth.DTO;
+import com.api.jwtauth.models.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TokenDTO {
-    private String login;
+    private User userDetails;
+    //private String login;
     private String token;
 }
