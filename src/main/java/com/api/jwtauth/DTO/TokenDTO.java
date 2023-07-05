@@ -10,6 +10,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TokenDTO {
     private User userDetails;
-    //private String login;
     private String token;
+
+    //private String login;
+    //private User user;
+    //private String variavel;
+
+
 }
